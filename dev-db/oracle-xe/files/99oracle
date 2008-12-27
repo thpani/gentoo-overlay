@@ -1,0 +1,14 @@
+ORACLE_BASE=/usr/lib/oracle
+ORACLE_HOME=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server
+ORACLE_SID='XE'
+ORACLE_TERM=xterm
+ORACLE_OWNER=oraclexe
+TNS_ADMIN=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/network/admin
+NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1
+ORA_NLS10=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/nls/data
+CLASSPATH=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/jdbc/lib/classes12.zip
+LD_LIBRARY_PATH=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/lib:$ORACLE_HOME/lib32
+DISABLE_HUGETLBFS=1
+PATH=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/bin
+ROOTPATH=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/bin
+LDPATH=/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/lib:/usr/lib/oracle/xe/app/oracle/product/10.2.0/server/lib32

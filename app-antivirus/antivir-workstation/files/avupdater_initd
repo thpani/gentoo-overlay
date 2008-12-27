@@ -1,0 +1,25 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+	use logger dns
+}
+
+checkconfig() {
+	if [ ! -f "/etc/avupdater.conf" ] ; then
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	ebegin "Starting avupdater"
+	/usr/lib/AntiVir/avupdater start
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping avupdater"
+	/usr/lib/AntiVir/avupdater stop
+	eend $?
+}
