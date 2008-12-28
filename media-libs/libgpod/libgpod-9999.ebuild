@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.10 2008/08/17 16:21:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.12 2008/11/30 16:38:47 bluebird Exp $
 
-inherit libtool subversion
+inherit eutils libtool subversion
 
 ESVN_REPO_URI="https://gtkpod.svn.sourceforge.net/svnroot/gtkpod/libgpod/trunk/"
 ESVN_BOOTSTRAP="autogen.sh"
@@ -13,13 +13,12 @@ SRC_URI=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="gtk python doc test"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="gtk python doc test hal"
 
 RDEPEND=">=dev-libs/glib-2.4
-	=sys-apps/hal-0.5*
+	hal? ( =sys-apps/hal-0.5* )
 	sys-apps/sg3_utils
-	dev-util/gtk-doc
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.3
 		>=x11-libs/gtk+-2
@@ -30,6 +29,16 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	python? ( >=dev-lang/swig-1.3.24 )
 	dev-util/pkgconfig"
+
+src_unpack() {
+	subversion_src_unpack
+	
+	cd "${S}"
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+
+	elibtoolize
+}
+
 
 src_compile() {
 
@@ -44,6 +53,7 @@ src_compile() {
 	econf ${myconf} \
 		$(use_enable doc gtk-doc) \
 		$(use_enable gtk gdk-pixbuf) \
+		$(use_with hal hal) \
 		$(use_with python) || die "configure failed"
 
 	emake || die "make failed"
