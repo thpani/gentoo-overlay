@@ -19,7 +19,7 @@ IUSE="doc examples ffmpeg gtk openal"
 RDEPEND="virtual/opengl
 	|| ( dev-python/ctypes >=dev-lang/python-2.5 )
 	ffmpeg? ( media-libs/avbin-bin )
-	gtk? ( >=x11-libs/gtk+:2 )
+	gtk? ( x11-libs/gtk+:2 )
 	openal? ( media-libs/openal )"
 # ffmpeg	compressed audio & video support
 # gtk		image loading support (via GDK)
