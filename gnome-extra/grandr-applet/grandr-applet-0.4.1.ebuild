@@ -7,8 +7,8 @@ inherit eutils gnome2
 MY_PN=${PN/-/_}
 
 DESCRIPTION="Simple gnome-panel frontend to the xrandr extension"
-HOMEPAGE="http://dekorte.homeip.net/download/grandr-applet/"
-SRC_URI="http://dekorte.homeip.net/download/${PN}/${MY_PN}-${PV}.tar.gz"
+HOMEPAGE="http://kdekorte.googlepages.com/grandr_applet"
+SRC_URI="http://kdekorte.googlepages.com/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
