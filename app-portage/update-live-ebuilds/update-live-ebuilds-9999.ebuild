@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 inherit git
@@ -13,6 +13,7 @@ SLOT="0"
 IUSE=""
 
 DEPENDS=">=app-shells/bash-3*
+	app-admin/sudo
 	sys-apps/findutils"
 
 src_install() {
