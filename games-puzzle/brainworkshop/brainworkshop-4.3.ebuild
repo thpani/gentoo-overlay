@@ -22,7 +22,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-4.3-fix-paths.patch"
-	sed -i 's/\r\n/\n/' ${PN}.pyw
+	sed -i -e 's/\r//' ${PN}.pyw
 }
 
 src_install() {
