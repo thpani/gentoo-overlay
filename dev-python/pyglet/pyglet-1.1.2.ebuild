@@ -34,7 +34,7 @@ pkg_setup() {
 		eerror "alisp and midi enabled for media-libs/alsa-lib."
 		eerror "Either rebuild alsa-lib with these flags enabled, or"
 		eerror "disable the alsa flag for pyglet."
-		elog "(To still get sound support you can enable the openal flag.)"
+		elog "(You can still get sound support if openal is enabled [default].)"
 		die "Missing USE flags on media-libs/alsa-lib."
 	fi
 }
