@@ -4,8 +4,7 @@
 
 EAPI="2"
 
-NEED_KDE="4.2"
-KDE_MINIMAL="4.2"
+KDE_MINIMAL="4.1"
 OPENGL_REQUIRED="optional"
 inherit kde4-base
 
