@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3.ebuild,v 1.2 2007/09/08 18:21:42 vapier Exp $
 
-inherit pam linux-info
+inherit eutils pam linux-info
 
 DESCRIPTION="Support for the UPEK/SGS Thomson Microelectronics fingerprint reader, often seen in Thinkpads"
 HOMEPAGE="http://thinkfinger.sourceforge.net/"
