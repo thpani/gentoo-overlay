@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aac flac gnome hal ogg"
 
 DEPEND=">=x11-libs/gtk+-2.6.0
