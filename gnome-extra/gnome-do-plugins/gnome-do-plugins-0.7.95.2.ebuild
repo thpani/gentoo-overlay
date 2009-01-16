@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=gnome-extra/gnome-do-${PV}
+RDEPEND=">=gnome-extra/gnome-do-${PVC2}
 		dev-dotnet/wnck-sharp"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
