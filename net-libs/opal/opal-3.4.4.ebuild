@@ -14,12 +14,14 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug doc java"
+IUSE="debug doc java +wav"
 
 RDEPEND=">=dev-libs/ptlib-2.0.0[debug=]
 	>=media-video/ffmpeg-0.4.7
 	media-libs/speex
-	java? ( virtual/jdk )"
+	java? ( virtual/jdk )
+	wav? ( dev-libs/ptlib[-minimal] )
+	!wav? ( dev-libs/ptlib[minimal] )"
 
 pkg_setup() {
 	# opal can't be built with --as-needed
