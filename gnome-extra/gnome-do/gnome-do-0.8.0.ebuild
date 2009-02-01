@@ -10,18 +10,17 @@ EAPI=2
 inherit gnome2 mono versionator eutils
 
 PVC=$(get_version_component_range 1-3)
-PVCS="trunk" #$(get_version_component_range 1-2)
 
 DESCRIPTION="GNOME Do allows you to get things done quickly"
 HOMEPAGE="http://do.davebsd.com/"
-SRC_URI="https://launchpad.net/do/${PVCS}/${PVC}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/do/trunk/${PVC}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="dev-lang/mono
+RDEPEND=">=dev-lang/mono-2.0
 	>=dev-dotnet/gconf-sharp-2.24.0
 	>=dev-dotnet/gtk-sharp-2.12.6
 	>=dev-dotnet/glade-sharp-2.12.6
@@ -35,7 +34,7 @@ RDEPEND="dev-lang/mono
 	>=dev-dotnet/art-sharp-2.24.0
 	dev-dotnet/mono-addins
 	dev-dotnet/notify-sharp
-	!<gnome-extra/gnome-do-plugins-0.6"
+	!<gnome-extra/gnome-do-plugins-0.8"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig"

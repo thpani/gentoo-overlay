@@ -5,19 +5,18 @@
 inherit eutils autotools gnome2 mono versionator
 
 MY_PN="do-plugins"
-PVC="trunk" #$(get_version_component_range 1-2)
-PVC2=$(get_version_component_range 1-3)
+PVC=$(get_version_component_range 1-3)
 
 DESCRIPTION="Plugins to put the Do in Gnome Do"
 HOMEPAGE="http://do.davebsd.com/"
-SRC_URI="https://launchpad.net/${MY_PN}/${PVC}/${PVC2}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/${MY_PN}/trunk/${PVC}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=gnome-extra/gnome-do-${PVC2}
+RDEPEND=">=gnome-extra/gnome-do-${PVC}
 		dev-dotnet/wnck-sharp"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
