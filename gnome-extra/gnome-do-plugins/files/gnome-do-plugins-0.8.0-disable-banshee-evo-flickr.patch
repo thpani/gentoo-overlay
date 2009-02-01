@@ -1,28 +1,38 @@
-diff -u --suppress-common-lines a/configure.ac b/configure.ac
---- a/configure.ac	2009-01-12 21:20:01.000000000 +0100
-+++ b/configure.ac	2009-01-16 19:55:17.000000000 +0100
-@@ -30,8 +30,6 @@
+diff -urN gnome-do-plugins-0.8.0.old/configure.ac gnome-do-plugins-0.8.0/configure.ac
+--- gnome-do-plugins-0.8.0.old/configure.ac	2009-02-01 15:00:03.000000000 +0100
++++ gnome-do-plugins-0.8.0/configure.ac	2009-02-01 15:00:21.000000000 +0100
+@@ -30,9 +30,6 @@
  SHAMROCK_EXPAND_BINDIR
  SHAMROCK_EXPAND_DATADIR
  
+-PKG_CHECK_MODULES([BANSHEE_INDEXER], [banshee-1-collection-indexer >= 1.4.2])
 -PKG_CHECK_MODULES([EVOLUTION_SHARP], [evolution-sharp])
 -PKG_CHECK_MODULES([FLICKRNET], [flickrnet])
  PKG_CHECK_MODULES([GCONF_SHARP_20], [gconf-sharp-2.0])
  PKG_CHECK_MODULES([GLADE_SHARP_20], [glade-sharp-2.0])
  PKG_CHECK_MODULES([GLIB_SHARP_20], [glib-sharp-2.0])
-@@ -54,8 +52,6 @@
+@@ -55,9 +52,6 @@
  GDATA_SHARP_DOCUMENTS_LIBS="-r:$top_srcdir/BundledLibraries/Google.GData.Client.dll -r:$top_srcdir/BundledLibraries/Google.GData.Extensions.dll -r:$top_srcdir/BundledLibraries/Google.GData.Documents.dll"
  GDATA_SHARP_CONTACTS_LIBS="-r:$top_srcdir/BundledLibraries/Google.GData.Client.dll -r:$top_srcdir/BundledLibraries/Google.GData.Extensions.dll -r:$top_srcdir/BundledLibraries/Google.GData.Contacts.dll"
  
+-AC_SUBST([BANSHEE_INDEXER_LIBS])
 -AC_SUBST([EVOLUTION_SHARP_LIBS])
 -AC_SUBST([FLICKRNET_LIBS])
  AC_SUBST([GCONF_SHARP_20_LIBS])
  AC_SUBST([GDATA_SHARP_ACL_LIBS])
  AC_SUBST([GDATA_SHARP_CALENDAR_LIBS])
-diff -u --suppress-common-lines a/Makefile.am b/Makefile.am
---- a/Makefile.am	2009-01-11 06:58:01.000000000 +0100
-+++ b/Makefile.am	2009-01-16 19:54:48.000000000 +0100
-@@ -14,10 +14,8 @@
+diff -urN gnome-do-plugins-0.8.0.old/Makefile.am gnome-do-plugins-0.8.0/Makefile.am
+--- gnome-do-plugins-0.8.0.old/Makefile.am	2009-02-01 15:00:03.000000000 +0100
++++ gnome-do-plugins-0.8.0/Makefile.am	2009-02-01 15:00:30.000000000 +0100
+@@ -7,7 +7,6 @@
+ 	Alias \
+ 	AptURL \
+ 	Archive \
+-	Banshee \
+ 	Bibtex \
+ 	Cl.ickable \
+ 	ClawsMail \
+@@ -16,10 +15,8 @@
  	DiskMounter \
  	EOG-Slideshow \
  	Epiphany \
