@@ -1,0 +1,13 @@
+Index: wrappers/pangographite/PangoGrFont.cpp
+===================================================================
+--- wrappers/pangographite/PangoGrFont.cpp	(revision 724)
++++ wrappers/pangographite/PangoGrFont.cpp	(working copy)
+@@ -42,7 +42,7 @@
+         FcPatternGetString (m_fcFont->font_pattern, FC_FAMILY, 0, &family);
+         strncpy(m_stFace, (const char *)family, kMaxFaceLength);
+     }
+-  setFace(l_face);
++  unlockFace();
+ }
+ /*
+ PangoGrFont::PangoGrFont(FT_Face face)

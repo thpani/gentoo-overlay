@@ -1,0 +1,37 @@
+Index: graphite/wrappers/pangographite/graphite-module.c
+===================================================================
+--- graphite/wrappers/pangographite/graphite-module.c	(revision 827)
++++ graphite/wrappers/pangographite/graphite-module.c	(working copy)
+@@ -149,6 +149,7 @@
+ {
+     g_return_if_fail (PANGO_IS_FC_FONT (font));
+     PangoFcFont *fcfont = PANGO_FC_FONT(font);
++    g_return_if_fail (pango_fc_font_lock_face(fcfont));
+     //static GStaticMutex mutex = G_STATIC_MUTEX_INIT;
+ 
+     //g_static_mutex_lock (&mutex);
+@@ -157,6 +158,7 @@
+       pango_language_to_string(analysis->language), analysis->level % 2);
+ 
+     //g_static_mutex_unlock (&mutex);
++    pango_fc_font_unlock_face(fcfont);
+ }
+ 
+ static PangoCoverageLevel
+@@ -233,7 +235,7 @@
+       }
+       else
+       {
+-        if (strstr((char*)fontcap, "ttable:Silf"))
++        if (strstr((char*)fontcap, "ttable:Silf") && pango_fc_font_lock_face(fcfont))
+         {
+           //static GStaticMutex mutex = G_STATIC_MUTEX_INIT;
+       
+@@ -244,6 +246,7 @@
+             pango_language_to_string(analysis->language),
+             analysis->level % 2);
+           //g_static_mutex_unlock (&mutex);
++          pango_fc_font_unlock_face(fcfont);
+           //return;
+         }
+       }
