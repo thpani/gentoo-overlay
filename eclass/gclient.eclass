@@ -21,12 +21,12 @@ DEPEND="dev-util/gclient
 # @ECLASS-VARIABLE: EGCLIENT_CONFIG_CMD
 # @DESCRIPTION:
 # gclient config command
-EGCLIENT_CONFIG_CMD="gclient.py config"
+EGCLIENT_CONFIG_CMD="gclient config"
 
 # @ECLASS-VARIABLE: EGCLIENT_FETCH_CMD
 # @DESCRIPTION:
 # gclient sync command
-EGCLIENT_UPDATE_CMD="gclient.py update"
+EGCLIENT_UPDATE_CMD="gclient update"
 
 # @ECLASS-VARIABLE: EGCLIENT_REPO_URI
 # @DESCRIPTION:
