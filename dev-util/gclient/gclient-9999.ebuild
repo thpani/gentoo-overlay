@@ -4,6 +4,8 @@
 
 ESVN_REPO_URI="http://gclient.googlecode.com/svn/trunk/gclient"
 
+inherit subversion
+
 DESCRIPTION="Manage checkouts and updates from various SCM repositories."
 HOMEPAGE="http://code.google.com/p/gclient/"
 SRC_URI=""

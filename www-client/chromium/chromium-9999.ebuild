@@ -50,7 +50,7 @@ src_install() {
 	cd "${S}/sconsbuild/Release"
 
 	exeinto "/opt/${PN}"
-	doexe chrome mksnapshot
+	doexe chrome
 	insinto "/opt/${PN}"
 	doins chrome.pak
 	doins -r locales themes
