@@ -3,7 +3,7 @@
 # $Header: $
 
 EBZR_BRANCH="trunk"
-EBZR_REVISION="213"
+#EBZR_REVISION="213"
 EBZR_REPO_URI="https://code.launchpad.net/~gwibber-committers/gwibber/"
 
 inherit bzr distutils
