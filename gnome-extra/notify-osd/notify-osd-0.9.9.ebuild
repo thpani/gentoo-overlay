@@ -15,16 +15,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/dbus-glib-0.76
+DEPEND="!x11-misc/notification-daemon
+	>=dev-libs/dbus-glib-0.76
 	>=dev-libs/glib-2.16.0
 	gnome-base/gconf
 	>=x11-libs/gtk+-2.6
 	x11-libs/libwnck"
 RDEPEND=""
 
-src_compile() {
+src_configure() {
 	append-flags -fno-strict-aliasing	# -Werror causes build to fail
-	
-	econf
-	emake || die "emake failed"
+	default
 }
