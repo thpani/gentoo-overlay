@@ -27,12 +27,17 @@ src_unpack() {
 }
 
 src_install() {
+	dodoc "AIR SDK Readme.txt" "SDK license.pdf"
+
 	insinto /opt/${P}
-	doins -r frameworks lib runtimes || die "doins failed"
+	doins -r frameworks lib runtimes samples templates || die "doins failed"
+
 	exeinto /opt/${P}/bin
 	doexe bin/adl || die "installing adl failed"
 	doexe bin/adt || die "installing adt failed"
+
 	dosym /opt/${P}/bin/adl /usr/bin/ || die "dosym adl failed"
 	dosym /opt/${P}/bin/adt /usr/bin/ || die "dosym adt failed"
+
 	dobin ${FILESDIR}/air-run
 }
