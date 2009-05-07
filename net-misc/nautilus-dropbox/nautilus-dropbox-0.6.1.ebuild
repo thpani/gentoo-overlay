@@ -15,6 +15,7 @@ IUSE="debug"
 
 #app-backup/dropbox
 RDEPEND=">=gnome-base/nautilus-2.16
+	>=dev-python/docutils-0.4
 	>=x11-libs/gtk+-2.12
 	>=net-misc/wget-1.10
 	>=dev-libs/glib-2.14

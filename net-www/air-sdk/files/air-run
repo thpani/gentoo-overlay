@@ -1,0 +1,3 @@
+#!/bin/sh
+
+adl -nodebug "$1/META-INF/AIR/application.xml" "$1"

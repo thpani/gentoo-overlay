@@ -16,7 +16,9 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-ruby/qt4-qtruby
-	virtual/latex-base
+	|| ( dev-texlive/texlive-fontsrecommended
+		 app-text/tetex
+		 app-text/ptex )
 	app-text/dvipng
 	media-gfx/pstoedit
 	x11-misc/xdg-utils"
