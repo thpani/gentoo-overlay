@@ -1,8 +1,0 @@
-solutions = [
-  { "name"        : "src",
-    "url"         : "http://src.chromium.org/svn/trunk/src",
-    "custom_deps" : {
-	  "src/webkit/data/layout_tests/LayoutTests": None,
-    }
-  }
-]
