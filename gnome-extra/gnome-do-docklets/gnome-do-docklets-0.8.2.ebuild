@@ -25,11 +25,3 @@ DEPEND="${RDEPEND}
 src_configure() {
 	econf --enable-debug=no --enable-release=yes || die "configure failed"
 }
-
-src_compile()
-{
-	# The make system is unfortunately broken for parallel builds and
-	# upstream indicated on IRC that they have no intention to fix
-	# that.
-	emake -j1 || die "make failed"
-}
